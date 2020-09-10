@@ -1,12 +1,12 @@
 module.exports = {
   title: 'My Site',
   tagline: 'The tagline of my site',
-  url: 'https://lockeysama.github.io/docs-test.blog.com/',
+  url: 'https://lockeysama.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'Lockeysama', // Usually your GitHub org/user name.
-  projectName: 'docs-test.blog.com', // Usually your repo name.
+  projectName: 'lockeysama.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'My Site',
