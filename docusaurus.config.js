@@ -2,7 +2,7 @@ module.exports = {
   title: 'My Site',
   tagline: 'The tagline of my site',
   url: 'https://lockeysama.github.io/',
-  baseUrl: '/',
+  baseUrl: '/lockeysama.github.io/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'Lockeysama', // Usually your GitHub org/user name.
