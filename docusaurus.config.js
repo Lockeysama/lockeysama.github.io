@@ -1,3 +1,5 @@
+const versions = require('./versions.json');
+
 module.exports = {
   title: 'My Site',
   tagline: 'The tagline of my site',
@@ -8,6 +10,11 @@ module.exports = {
   organizationName: 'Lockeysama', // Usually your GitHub org/user name.
   projectName: 'lockeysama.github.io', // Usually your repo name.
   themeConfig: {
+    algolia: {
+      apiKey: "0797d5513a4961659b3f15828b64f261",
+      indexName: "amphoradata",
+      algoliaOptions: {}, // Optional, if provided by Algolia
+    },
     navbar: {
       title: 'My Site',
       logo: {
@@ -20,8 +27,32 @@ module.exports = {
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left',
+          items: [
+            {
+              label: `${versions[0]}(Latest)`,
+              to: 'docs/',
+            },
+            ...versions.slice(1).map((version) => ({
+              label: version,
+              to: `docs/${version}/`,
+            }))
+          ]
         },
         {to: 'blog', label: 'Blog', position: 'left'},
+        {
+          label: 'SDKs',
+          position: 'right',
+          items: [
+            {
+              label: '安卓',
+              href: 'https://github.com/Entertech/Enter-Biomodule-Demo-Android',
+            },
+            {
+              label: 'iOS',
+              href: 'https://github.com/Entertech/Enter-Biomodule-BLE-iOS-SDK',
+            }
+          ]
+        },
         {
           href: 'https://lockeysama.github.io/docs-test.blog.com/',
           label: 'GitHub',
